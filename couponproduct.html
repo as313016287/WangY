@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/couponproduct.less">
+		<script type="text/html" id="prQuanHtml">
+			{{if result}} {{each result as v i}}
+			<li class="cpShow{{i}}" value="{{i}}">
+				<a href="javascript:;">
+					<div class="media">
+						<div class="media-left">
+							{{#v.couponProductImg}}
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">{{v.couponProductName}}</h4>
+							<h5>{{v.couponProductPrice}}</h5>
+							<div class="time">
+								有效期至7月31日
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="head">
+			<div class="fh">
+				<a href="javascrip:;" class="glyphicon glyphicon-menu-left"></a>
+			</div>
+			<div class="h-title"></div>
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--提示-->
+		<h5 class="tip">--点餐前出示手机中的优惠券，即可享受优惠--</h5>
+		<!--优惠券-->
+		<section id="prQuan">
+			<ul>
+
+			</ul>
+		</section>
+		<!--导航-->
+		<section id="prTitle">
+			<span><a href="index.html">首页</a></span>
+			<span> > </span>
+			<span id="titleName"><a href="coupon.html">优惠券</a></span>
+			<span> > </span>
+			<span id="prName"><a href="#"></a></span>
+		</section>
+		<!--遮罩-->
+		<div id="lay">
+			<div class="lay-in">
+				<a href="javascript:;" class="prev glyphicon glyphicon-arrow-left"></a>
+				<img src="">
+				<a href="javascript:;" class="next glyphicon glyphicon-arrow-right"></a>
+			</div>
+		</div>
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/couponproduct.js"></script>
+	</body>
+
+</html>

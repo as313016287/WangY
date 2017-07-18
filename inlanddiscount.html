@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/inlanddiscount.less">
+		<script type="text/html" id="prListHtml">
+			{{if result}} {{each result as v}}
+			<li>
+				<a href="discount.html?prId={{v.productId}}">
+					<div class="img">
+						{{#v.productImg}}
+					</div>
+					<div class="title">
+						{{v.productName}}
+					</div>
+					<div class="subtitle">
+						{{v.productPrice}}
+					</div>
+					<div class="info">
+						{{v.productFrom}}|{{v.productTime}}
+					</div>
+				</a>
+			</li>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="head">
+			<div class="fh">
+				<a href="javascrip:;" class="glyphicon glyphicon-menu-left"></a>
+			</div>
+			国内折扣
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--商品列表-->
+		<section id="prList">
+			<ul>
+
+			</ul>
+		</section>
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/inlanddiscount.js"></script>
+	</body>
+
+</html>

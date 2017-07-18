@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/coupon.less">
+		<script type="text/html" id="quanHtml">
+			{{if result}} {{each result as v}}
+			<li>
+				<a href="{{v.couponLink}}?cpId={{v.couponId}}&cpName={{v.couponTitle}}">
+					<img src="{{v.couponImg}}" />
+					<span>
+							{{v.couponTitle}}
+						</span>
+				</a>
+			</li>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="head">
+			<div class="fh">
+				<a href="javascrip:;" class="glyphicon glyphicon-menu-left"></a>
+			</div>
+			优惠券
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--优惠券-->
+		<section id="quan">
+			<ul>
+
+			</ul>
+		</section>
+		<!--导航-->
+		<section id="prTitle">
+			<span><a href="index.html">首页</a></span>
+			<span> > </span>
+			<span id="titleName"><a href="coupon.html">优惠券</a></span>
+		</section>
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/coupon.js"></script>
+	</body>
+
+</html>

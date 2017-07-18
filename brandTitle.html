@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/brandTitle.less">
+		<script type="text/html" id="tHtml">
+			{{if result}} {{each result as v}}
+			<div>
+				<a href="brand.html?btId={{v.brandTitleId}}&btName={{v.brandTitle}}">
+					{{v.brandTitle}}
+				</a>
+			</div>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+	<body>
+		<!--头部-->
+		<header id="header">
+			<h1 class="logo"><a href="index.html" title="慢慢买-一款让你停不下来的app"><img src="images/header_logo.png" alt="" /></a></h1>
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--搜索-->
+		<section id="search">
+			<form action="">
+				<div class="searchBox">
+					<input type="search" id="searchTxt" placeholder="请输入你想比价的商品名称" />
+					<input type="button" id="searchBtn" value="搜索" />
+				</div>
+			</form>
+		</section>
+		<!--返回-->
+		<section id="prTitle">
+			<span><a href="index.html">首页</a></span>
+			<span> > </span>
+			<span id="titleName"><a href="brandTitle.html">品牌大全</a></span>
+		</section>
+		<!--品牌列表-->
+		<div id="title">
+			<div class="title-t">
+				热门品牌排行
+			</div>
+			<div class="title-m">
+
+			</div>
+		</div>
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/bransdTitle.js"></script>
+	</body>
+
+</html>

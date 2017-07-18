@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/baicaijia.less">
+		<script type="text/html" id="navHtml">
+			{{if result}} {{each result as v}}
+			<li class="" value="{{v.titleId}}">
+				<a href="#">{{v.title}}</a>
+			</li>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/html" id="list">
+			{{if result}} {{each result as v}}
+			<li>
+				<a href="#">
+				</a>
+				<div class="pic">
+					{{#v.productImg}}
+				</div>
+				<div class="inf">
+					<div class="i">
+						<h4>{{#v.productName}}</h4>
+						<span class="ic">{{#v.productPrice}}</span>
+					</div>
+					<div class="o">
+						<div class="top">
+							{{#v.productCouponRemain}}
+						</div>
+						<div class="bottom">
+							<div class="bl">
+								{{#v.productCoupon}}
+							</div>
+							<div class="br">
+								{{#v.productHref}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="head">
+			<div class="fh">
+				<a href="javascrip:;" class="glyphicon glyphicon-menu-left"></a>
+			</div>
+			白菜价-淘宝内部券
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--导航-->
+		<section id="nav">
+			<div class="nt-l">
+				<ul>
+					
+				</ul>
+			</div>
+			<div class="nt-s">
+				<div class="glyphicon glyphicon-search"></div>
+			</div>
+			<div class="nt-sib">
+				<input type="search" class="search" placeholder="搜索商品即可查内部券" />
+				<input type="submit" class="btn" value="搜索">
+			</div>
+		</section>
+		<!--产品列表-->
+		<section id="prList">
+			<ul>
+
+			</ul>
+		</section>
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/iscroll.js"></script>
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/baicaijia.js"></script>
+	</body>
+
+</html>

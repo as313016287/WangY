@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/moneyproduct.less">
+		<script type="text/html" id="spHtml">
+			{{if result}} {{each result as v}}
+			<div class="container">
+				<h3>{{v.productName}}</h3>
+				<h4>{{v.productPinkage}}</h4>
+				<div class="info">
+					<span>{{v.productFrom}}</span>
+					<span>{{v.productTime}}</span>
+					<span>{{v.productTips}}</span>
+				</div>
+			</div>
+			<div class="pr-main">
+				{{#v.productImg2}}
+				<p class="dc">
+					{{v.productInfo2}}
+				</p>
+				<p class="jg">
+					{{v.productInfo1}}
+				</p>
+			</div>
+			<div id="goLink">
+				<a href="#">
+					<span class="glyphicon glyphicon-shopping-cart"></span> 前往购买
+				</a>
+			</div>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="head">
+			<div class="fh">
+				<a href="javascrip:;" class="glyphicon glyphicon-menu-left"></a>
+			</div>
+			国内折扣
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--商品信息-->
+		<section id="prMain">
+
+		</section>
+		<!--评论-->
+		<section id="pl">
+			
+		</section>
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/moneyproduct.js"></script>
+	</body>
+
+</html>

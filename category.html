@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/category.less">
+		<link rel="stylesheet" type="text/css" href="fonts/iconFont/iconfont.css">
+		<script type="text/html" id="head">
+			{{if result}} {{each result as v}}
+			<div class="br-t br-t{{v.titleId}}" value="0">
+				<h3>{{ v.title }}
+						<i></i>
+				</h3>
+			</div>
+			<div class="br-m br-m{{ v.titleId }}">
+				<ul>
+
+				</ul>
+			</div>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/html" id="lis">
+			{{if result}} {{each result as v}}
+			<li>
+				<a href="productlist.html?id={{v.categoryId}}&titlename={{v.titleId}}">{{ v.category }}</a>
+			</li>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header">
+			<h1 class="logo"><a href="index.html" title="慢慢买-一款让你停不下来的app"><img src="images/header_logo.png" alt="" /></a></h1>
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--搜索-->
+		<section id="search">
+			<form action="">
+				<div class="searchBox">
+					<input type="search" id="searchTxt" placeholder="请输入你想比价的商品名称" />
+					<input type="button" id="searchBtn" value="搜索" />
+				</div>
+			</form>
+		</section>
+		<!--分类-->
+		<section id="brief">
+			<div class="brief-in">
+
+			</div>
+		</section>
+
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/category.js"></script>
+	</body>
+
+</html>

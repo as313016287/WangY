@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--引入第三方框架UI-->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet/less" href="css/base.less">
+		<link rel="stylesheet/less" href="css/productlist.less">
+		<script type="text/html" id="setLis">
+			{{if result}} {{each result as v}}
+			<a href="bijia.html?prId={{v.productId}}&catId={{v.categoryId}}&prName={{v.brandName}}">
+				<div class="media">
+					<div class="media-left media-middle">
+						{{ #v.productImg }}
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">{{v.productName}}</h4>
+						<span class="price">{{v.productPrice}}</span>
+						<div class="other">
+							<span class="ol">{{v.productQuote}}</span>
+							<span class="or">{{ v.productCom }}</span>
+						</div>
+					</div>
+				</div>
+			</a>
+			{{/each}} {{/if}}
+		</script>
+		<script type="text/javascript" src="lib/less/less.js"></script>
+		<script type="text/javascript" src="lib/template.js"></script>
+		<title>慢慢买</title>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header">
+			<h1 class="logo"><a href="index.html" title="慢慢买-一款让你停不下来的app"><img src="images/header_logo.png" alt="" /></a></h1>
+			<div class="app">
+				<a href="#"><img src="images/header_app.png" alt="手机app下载" /></a>
+			</div>
+		</header>
+		<!--搜索-->
+		<section id="search">
+			<form action="">
+				<div class="searchBox">
+					<input type="search" id="searchTxt" placeholder="请输入你想比价的商品名称" />
+					<input type="button" id="searchBtn" value="搜索" />
+				</div>
+			</form>
+		</section>
+		<!--分类-->
+		<section id="prTitle">
+			<span><a href="index.html">首页</a></span>
+			<span> > </span>
+			<span id="titleName"><a href="category.html"></a></span>
+			<span> > </span>
+			<span id="catName"><a href="#"></a></span>
+		</section>
+		<!--列表-->
+		<section id="prList">
+			<div class="prl-main">
+				
+			</div>
+			<div class="prl-page">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4">
+							<input type="button" name="prev" id="prev" value="上一页" />
+						</div>
+						<div class="col-xs-4">
+							<select name="" id="sel">
+								
+							</select>
+						</div>
+						<div class="col-xs-4">
+							<input type="button" name="prev" id="next" value="下一页" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--底部-->
+		<section id="footer">
+			<div class="foot-top">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#"><img src="images/foot-top.jpg" />返回顶部</a>
+			</div>
+			<div class="foot-bottom">
+				<p>
+					<a href="#">手机APP下载</a>
+					<a href="#">慢慢买手机版</a>
+					--掌上比价平台
+				</p>
+				<p>m.manmanbuy.com</p>
+			</div>
+		</section>
+
+		<!--js文件 注意引入的依赖关系-->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/productlist.js"></script>
+	</body>
+
+</html>

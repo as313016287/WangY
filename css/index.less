@@ -1,0 +1,158 @@
+body {
+    background-color: #f7f7f7;
+}
+#menu {
+    background-color: #fff;
+    .row {
+        margin-top: 16px;
+        height: 70px;
+        .col-xs-3 {
+            height: 100%;
+            margin-bottom: 16px;
+            overflow: hidden;
+            &:nth-last-of-type(-n+4) {
+                display: none;
+            }
+            a {
+                text-decoration: none;
+                font-size: 13px;
+                display: block;
+                color: #5a5a5a;
+                .mepic {
+                    width: 100%;
+                    height: 50px;
+                    position: relative;
+                    img {
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                .mename {
+                    width: 100%;
+                    height: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    color: #5a5a5a;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+}
+
+#recommen {
+    width: 100%;
+    margin-top: 3px;
+    h3 {
+        height: 100%;
+        margin: 0;
+        a {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            line-height: 36px;
+            padding-left: 16px;
+            background-color: #ff9000;
+            position: relative;
+            font-weight: 900;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+            span {
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                top: 50%;
+                right: 8px;
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 400;
+                transform: translateY(-50%);
+                border: 1px solid #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+    .product {
+        .product-main {
+            background-color: #fff;
+            a {
+                display: block;
+                text-decoration: none;
+                border-bottom: 1px solid #eee;
+                .media {
+                    height: 128px;
+                    padding: 14px 8px;
+                    .media-left {
+                        img {
+                            height: 100px;
+                            width: 100px;
+                        }
+                    }
+                    .media-body {
+                        position: relative;
+                        .media-heading {
+                            font-size: 15px;
+                            color: #333;
+                        }
+                        span {
+                            color: #ff6c00;
+                        }
+                        .other {
+                            position: absolute;
+                            bottom: 0;
+                            height: 24px;
+                            line-height: 24px;
+                            width: 100%;
+                            .mall {
+                                display: block;
+                                color: #a1a1a1;
+                                font-size: 12px;
+                                float: left;
+                            }
+                            .pl-num {
+                                float: right;
+                                color: #a1a1a1;
+                            }
+                            .pl {
+                                display: block;
+                                color: #a1a1a1;
+                                float: right;
+                                height: 14px;
+                                margin: 6px;
+                                width: 14px;
+                                font-size: 12px;
+                                background: url(../images/pl1.png) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .morePd {
+            height: 32px;
+            width: 100%;
+            margin: 10px 0;
+            a {
+                display: block;
+                height: 30px;
+                margin: 0 10px;
+                background-color: #f4f4f4;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                color: #5a5a5a;
+                font-size: 13px;
+                text-decoration: none;
+                font-family: "微软雅黑";
+                text-align: center;
+                line-height: 30px;
+                background-image: linear-gradient( #fff, #f4f4f4);
+            }
+        }
+    }
+}

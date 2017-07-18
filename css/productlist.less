@@ -1,0 +1,105 @@
+body {
+    background-color: #f2f2f2;
+}
+
+#prTitle {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 15px;
+    font-size: 12px;
+    background-color: #fff;
+    span {
+        display: block;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 3px;
+        a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+        }
+    }
+}
+
+#prList {
+    .prl-main {
+        background-color: #fff;
+        a {
+            display: block;
+            text-decoration: none;
+            .media {
+                height: 140px;
+                padding: 10px 8px;
+                border-bottom: 1px solid #e6e6e6;
+                img {
+                    width: 120px;
+                    height: 120px;
+                    margin-right: 10px;
+                }
+                .media-heading {
+                    font-size: 14px;
+                    line-height: 28px;
+                    height: 56px;
+                    overflow: hidden;
+                    color: #333;
+                }
+                .price {
+                    display: block;
+                    height: 21px;
+                    margin-top: 8px;
+                    font-size: 18px;
+                    color: #ed0000;
+                }
+                .other {
+                    height: 21px;
+                    margin-top: 8px;
+                    .ol,
+                    .or {
+                        display: block;
+                        color: #a1a1a1;
+                        line-height: 21px;
+                        overflow: hidden;
+                        font-size: 12px;
+                    }
+                    .ol {
+                        float: left;
+                    }
+                    .or {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    .prl-page {
+        margin-top: 20px;
+        .container {
+            .row {
+                height: 34px;
+                .col-xs-4 {
+                    height: 100%;
+                    position: relative;
+                    select,
+                    input {
+                        width: 82px;
+                        height: 34px;
+                        position: absolute;
+                    }
+                    input {
+                        border-radius: 5px;
+                        outline: none;
+                        border: none;
+                        background-color: #d4d4d4;
+                        background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+                        border: 1px solid #bababa;
+                    }
+                }
+            }
+        }
+    }
+}
