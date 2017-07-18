@@ -2,7 +2,7 @@ $(function(){
 	function menuAjax (){
 		$.ajax({
 			type:"get",
-			url:"http://182.254.146.100:3000/api/getindexmenu",
+			url:"https://182.254.146.100:3000/api/getindexmenu",
 			dataType: "json",
 			success: function ( data ){
 				var innerMenu = template( "tpMenu", data );
@@ -19,7 +19,7 @@ $(function(){
 	function pdAjax (){
 		$.ajax({
 			type:"get",
-			url:"http://182.254.146.100:3000/api/getmoneyctrl",
+			url:"https://182.254.146.100:3000/api/getmoneyctrl",
 			dataType: "json",
 			success: function ( data ){
 				console.log( data )
