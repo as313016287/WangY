@@ -3,8 +3,11 @@ $(function() {
 		window.history.back();
 	});
 	var wHeight = $(window).height();
-
-	FastClick.attach(document.body);
+	if('addEventListener' in document) {
+		document.addEventListener('DOMContentLoaded', function() {
+			FastClick.attach(document.body);
+		}, false);
+	}
 
 	$.ajax({
 		type: "get",
@@ -29,14 +32,14 @@ $(function() {
 			});
 			$(".nt-l>ul>li")[0].className = "active";
 			for(var i = 0; i < $(".nt-l>ul>li").length; i++) {
-				$(".nt-l>ul>li")[i].onclick = function() {
+				$(".nt-l>ul>li")[i].addEventListener("FastClick", function() {
 					for(var j = 0; j < $(".nt-l>ul>li").length; j++) {
 						$(".nt-l>ul>li")[j].className = "";
 					}
 					this.className = "active";
 					id = this.value;
 					listAjax(id);
-				}
+				})
 			}
 		}
 	});
