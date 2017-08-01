@@ -3,6 +3,9 @@ $(function() {
 		window.history.back();
 	});
 	var wHeight = $(window).height();
+
+	FastClick.attach(document.body);
+
 	$.ajax({
 		type: "get",
 		url: "http://182.254.146.100:3000/api/getbaicaijiatitle",
@@ -54,9 +57,9 @@ $(function() {
 				var i,
 					s = 0,
 					max = 8;
-					for(var j = 0; j < length; j++) {
-						$("#prList>ul>li")[j].style.display = "none";
-					}
+				for(var j = 0; j < length; j++) {
+					$("#prList>ul>li")[j].style.display = "none";
+				}
 				for(i = 0; i < max; i++) {
 					$("#prList>ul>li")[i].style.display = "block";
 					s++;
