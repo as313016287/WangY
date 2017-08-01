@@ -3,12 +3,6 @@ $(function() {
 		window.history.back();
 	});
 	var wHeight = $(window).height();
-	if('addEventListener' in document) {
-		document.addEventListener('DOMContentLoaded', function() {
-			FastClick.attach(document.body);
-		}, false);
-	}
-
 	$.ajax({
 		type: "get",
 		url: "http://182.254.146.100:3000/api/getbaicaijiatitle",
@@ -28,18 +22,20 @@ $(function() {
 			var myScroll = new IScroll('.nt-l', {
 				/*设置水平滑动，不允许垂直滑动*/
 				scrollX: true,
-				scrollY: false
+				scrollY: false,
+				mouseWheel: true,
+				click: true
 			});
 			$(".nt-l>ul>li")[0].className = "active";
 			for(var i = 0; i < $(".nt-l>ul>li").length; i++) {
-				$(".nt-l>ul>li")[i].addEventListener("FastClick", function() {
+				$(".nt-l>ul>li")[i].onclick = function() {
 					for(var j = 0; j < $(".nt-l>ul>li").length; j++) {
 						$(".nt-l>ul>li")[j].className = "";
 					}
 					this.className = "active";
 					id = this.value;
 					listAjax(id);
-				})
+				}
 			}
 		}
 	});
